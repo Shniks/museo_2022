@@ -1,5 +1,3 @@
-require 'pry'
-
 class Photograph
 
   attr_reader :id,
@@ -13,11 +11,5 @@ class Photograph
     @artist_id = attributes[:artist_id]
     @year = attributes[:year]
   end
-
-
-
-
-
-
 
 end
