@@ -1,0 +1,27 @@
+{
+  "Unit Tests": {
+    "coverage": {
+      "/Users/lihkin/coding/ruby/practice/museo_2022/lib/photograph.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1656612989
+  }
+}
