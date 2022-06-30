@@ -227,7 +227,7 @@ class CuratorTest < Minitest::Test
 
     result = curator.artists_with_multiple_photographs
 
-    assert_equal [photo_3, photo_4], result
+    assert_equal [artist_3], result
   end
 
 end

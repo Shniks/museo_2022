@@ -5,11 +5,13 @@ require 'pry'
 class Curator
 
   attr_reader :photographs,
-              :artists
+              :artists,
+              :how_many_photos
 
   def initialize
     @photographs = []
     @artists = []
+    @how_many_photos = Hash.new
   end
 
   def add_photograph(photo)
@@ -33,5 +35,25 @@ class Curator
       photo.artist_id == artist.id
     end
   end
+
+  def artists_with_multiple_photographs
+    artists.map do |artist|
+      all_artist_photos = find_photographs_by_artist(artist)
+      how_many_photos[artist] = all_artist_photos.count
+    end
+    find_artists_with_more_than_two_photos
+  end
+
+  def find_artists_with_more_than_two_photos
+    how_many_photos.select do |artist, value|
+      value >= 2
+    end.keys
+  end
+
+
+
+
+
+
 
 end
