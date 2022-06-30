@@ -39,6 +39,12 @@
           1,
           null,
           null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
           null,
           null,
           null,
@@ -47,11 +53,38 @@
       },
       "/Users/lihkin/coding/ruby/practice/museo_2022/lib/curator.rb": {
         "lines": [
+          1,
+          1,
+          1,
           null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/lihkin/coding/ruby/practice/museo_2022/lib/photograph.rb": {
+        "lines": [
+          1,
           null,
           1,
           null,
           null,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          2,
           null,
           null,
           null
@@ -97,27 +130,8 @@
           null,
           null
         ]
-      },
-      "/Users/lihkin/coding/ruby/practice/museo_2022/lib/photograph.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          2,
-          2,
-          2,
-          2,
-          null,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1656614253
+    "timestamp": 1656614409
   }
 }

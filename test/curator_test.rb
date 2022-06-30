@@ -10,7 +10,13 @@ class CuratorTest < Minitest::Test
   def test_if_it_exists
     curator = Curator.new
 
-    assert_instance_of Curator, curator 
+    assert_instance_of Curator, curator
+  end
+
+  def test_it_has_attributes
+    curator = Curator.new
+
+    assert_equal [], curator.photographs
   end
 
 
