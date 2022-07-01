@@ -81,4 +81,10 @@ class Curator
     end
   end
 
+  def photographs_taken_between(date_range)
+    photographs.select do |photograph|
+      date_range.include?(photograph.year.to_i)
+    end
+  end
+
 end
