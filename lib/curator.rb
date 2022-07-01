@@ -1,6 +1,7 @@
 require './lib/photograph'
 require './lib/artist'
 require 'pry'
+require 'csv'
 
 class Curator
 
@@ -61,6 +62,14 @@ class Curator
   def check_the_artists_country(artist, country, country_photos)
     if artist.country == country
       country_photos << find_photographs_by_artist(artist)
+    end
+  end
+
+  def load_photographs(file)
+    CSV.foreach(file, headers:true) do |line|
+      element = ({id: line[0], name: line[1], artist_id: line[2], year: line[3]})
+      photo = Photograph.new(element)
+      add_photograph(photo)
     end
   end
 
