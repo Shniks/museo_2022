@@ -302,4 +302,12 @@ class CuratorTest < Minitest::Test
     assert_equal 4, curator.photographs.count
   end
 
+  def test_if_it_can_load_artists_from_a_file
+    curator = Curator.new
+    curator.load_artists('./data/artists.csv')
+
+    assert_instance_of Artist, curator.artists[0]
+    assert_equal 6, curator.artists.count
+  end
+
 end

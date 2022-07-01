@@ -73,4 +73,12 @@ class Curator
     end
   end
 
+  def load_artists(file)
+    CSV.foreach(file, headers:true) do |line|
+      element = ({id: line[0], name: line[1], born: line[2], died: line[3], country: line[4]})
+      artist = Artist.new(element)
+      add_artist(artist)
+    end
+  end
+
 end
