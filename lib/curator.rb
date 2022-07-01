@@ -1,6 +1,5 @@
 require './lib/photograph'
 require './lib/artist'
-require 'pry'
 require 'csv'
 
 class Curator
@@ -85,6 +84,23 @@ class Curator
     photographs.select do |photograph|
       date_range.include?(photograph.year.to_i)
     end
+  end
+
+  def artists_photographs_by_age(artist)
+    artist_photos = find_photographs_by_artist(artist)
+    photos_by_age = Hash.new
+    find_photos_by_age(artist, photos_by_age, artist_photos)
+    photos_by_age
+  end
+
+  def find_photos_by_age(artist, photos_by_age, artist_photos)
+    artist_photos.each do |photo|
+      photos_by_age[artist_age(photo, artist)] = photo.name
+    end
+  end
+
+  def artist_age(photo, artist)
+    photo.year.to_i - artist.born.to_i
   end
 
 end
